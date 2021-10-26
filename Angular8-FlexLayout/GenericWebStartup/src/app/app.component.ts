@@ -1,4 +1,4 @@
-import { AfterViewInit, ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, OnInit, OnDestroy } from '@angular/core';
 import { MediaChange, MediaObserver } from '@angular/flex-layout';
 import { Subscription } from 'rxjs';
 
@@ -7,7 +7,7 @@ import { Subscription } from 'rxjs';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit, AfterViewInit{
+export class AppComponent implements OnInit, AfterViewInit, OnDestroy{
 
   private mediaSub: Subscription;
   constructor(
@@ -28,6 +28,12 @@ export class AppComponent implements OnInit, AfterViewInit{
 
   ngAfterViewInit() {
 
+  }
+
+  ngOnDestroy() {
+    if (this.mediaSub) {
+      this.mediaSub.unsubscribe();
+    }
   }
 
 }
