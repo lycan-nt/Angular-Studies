@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-
+@import url('~bootstrap/dist/css/bootstrap.min.css');
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
@@ -12,7 +12,7 @@ $mat-card-header-size: 40px !default;
     object-fit: cover;
     background: #000;
 }
-
-.material-input-full-width{
+.full-width,
+.material-input-full-width {
     width: 100%;
 }
