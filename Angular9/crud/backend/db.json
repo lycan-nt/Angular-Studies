@@ -19,6 +19,11 @@
       "name": "product Teste",
       "price": 150.69,
       "id": 4
+    },
+    {
+      "name": "Veio do form",
+      "price": "100.00",
+      "id": 5
     }
   ]
 }
