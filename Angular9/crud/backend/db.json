@@ -34,6 +34,11 @@
       "name": "Note Book",
       "price": "3500,00",
       "id": 7
+    },
+    {
+      "name": "Biz",
+      "price": "5800,00",
+      "id": 8
     }
   ]
 }
