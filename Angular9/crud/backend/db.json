@@ -22,23 +22,8 @@
     },
     {
       "name": "Veio do form",
-      "price": "100.00",
+      "price": 100,
       "id": 5
-    },
-    {
-      "name": "Cerveja",
-      "price": "30.00",
-      "id": 6
-    },
-    {
-      "name": "Note Book",
-      "price": "3500,00",
-      "id": 7
-    },
-    {
-      "name": "Biz",
-      "price": "5800,00",
-      "id": 8
     }
   ]
 }
