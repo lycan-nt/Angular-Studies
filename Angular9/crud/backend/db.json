@@ -2,8 +2,8 @@
   "products": [
     {
       "id": 1,
-      "name": "Caneta BIC",
-      "price": 5.89
+      "name": "Caneta BIC 2",
+      "price": "6.70"
     },
     {
       "id": 3,
