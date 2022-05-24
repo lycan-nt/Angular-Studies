@@ -39,7 +39,7 @@ export class CategoriaUpdateComponent implements OnInit {
     this.service.mensagem("Categória atualizada com sucesso!");
     },
     err => {
-      console.log(err);
+      this.service.mensagem("Verifique se todos os campos estão preenchidos.");
     }
     )
   }
