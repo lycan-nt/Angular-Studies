@@ -1,3 +1,6 @@
+import { Livro } from './../livro.model';
+import { ActivatedRoute, Router } from '@angular/router';
+import { LivroService } from './../livro.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 
@@ -8,13 +11,40 @@ import { FormControl, Validators } from '@angular/forms';
 })
 export class LivroCreateComponent implements OnInit {
 
-  titulo = new FormControl('', [Validators.minLength(3)]);
-  nome_autor = new FormControl('', [Validators.minLength(3)]);
-  texto = new FormControl('', [Validators.minLength(10)]);
+  livro: Livro = {
+    id: '',
+    titulo: '',
+    nomeAutor: '',
+    texto: ''
+  }
 
-  constructor() { }
+  titulo = new FormControl('', [Validators.minLength(3)]);
+  nomeAutor = new FormControl('', [Validators.minLength(3)]);
+  texto = new FormControl('', [Validators.minLength(10)]);
+  id_cat: String = '';
+
+  constructor(
+    private service: LivroService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
+    this.id_cat = this.route.snapshot.paramMap.get('id_cat')!;
+  }
+
+  create(): void {
+    this.service.create(this.livro, this.id_cat).subscribe((resp) => {
+      this.router.navigate([`categorias/${this.id_cat}/livros`]);
+      this.service.mensagem('Livro criado com sucesso!')
+    }, err => {
+      this.router.navigate([`categorias/${this.id_cat}/livros`]);
+      this.service.mensagem('Erro ao criar novo livro!');
+    })
+  }
+
+  cancel(): void {
+    this.router.navigate([`categorias/${this.id_cat}/livros`]);
   }
 
   getMessage() {
@@ -22,7 +52,7 @@ export class LivroCreateComponent implements OnInit {
       return 'O campo TITULO deve conter entre 3 e 100 carateres';
     }
 
-    if (this.nome_autor.invalid) {
+    if (this.nomeAutor.invalid) {
       return 'O  campo NOME DO AUTOR deve conter entre 3 e 100 carateres';
     }
 
