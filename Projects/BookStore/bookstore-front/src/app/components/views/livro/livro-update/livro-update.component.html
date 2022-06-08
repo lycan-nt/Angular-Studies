@@ -20,7 +20,7 @@
     </mat-form-field>
 
     <div class="button">
-        <button [disabled]="getMessage()" mat-stroked-button color="primary" class="mat-elevation-z8">
+        <button (click)="update()" [disabled]="getMessage()" mat-stroked-button color="primary" class="mat-elevation-z8">
             Atualizar
         </button>
 
