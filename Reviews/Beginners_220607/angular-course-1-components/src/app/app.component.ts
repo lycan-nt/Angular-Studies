@@ -1,3 +1,4 @@
+import { Course } from './model/course';
 import { Component } from '@angular/core';
 import {COURSES} from '../db-data';
 
@@ -13,5 +14,9 @@ export class AppComponent {
   rxjsCourse = COURSES[1];
 
   ngrxCourse = COURSES[2];
+
+  onCourseSelected(course: Course) {
+    console.log("APP Component click ", course)
+  }
 
 }
