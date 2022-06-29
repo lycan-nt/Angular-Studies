@@ -27,4 +27,8 @@ export class CourseCardComponent implements OnInit {
     this.courseEmiter.emit(this.course)
   }
 
+  isImageVisible() {
+    return this.course && this.course.iconUrl;
+  }
+
 }
