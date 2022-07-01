@@ -37,4 +37,8 @@ export class CourseCardComponent implements OnInit {
     }
   }
 
+  cardStyle() {
+    return { 'background-image': 'url(' + this.course.iconUrl +')' };
+  }
+
 }
