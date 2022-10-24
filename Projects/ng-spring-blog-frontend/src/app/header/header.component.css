@@ -14,3 +14,10 @@
   color: aliceblue;
   padding-top: 10px;
 }
+
+.new-post {
+  float: right;
+  color: aliceblue;
+  padding-top: 10px;
+  text-decoration: none;
+}

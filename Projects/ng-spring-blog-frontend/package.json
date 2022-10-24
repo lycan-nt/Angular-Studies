@@ -18,6 +18,7 @@
     "@angular/platform-browser": "^14.1.0",
     "@angular/platform-browser-dynamic": "^14.1.0",
     "@angular/router": "^14.1.0",
+    "@tinymce/tinymce-angular": "^7.0.0",
     "bootstrap": "^5.2.2",
     "ngx-webstorage": "^10.0.1",
     "rxjs": "~7.5.0",
