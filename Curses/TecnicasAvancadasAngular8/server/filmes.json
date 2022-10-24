@@ -239,6 +239,26 @@
       "urlIMDB": "",
       "genero": "Ação",
       "id": 24
+    },
+    {
+      "titulo": "Opá",
+      "urlFoto": "",
+      "dtLancamento": "2022-10-24T03:00:00.000Z",
+      "descricao": "teste",
+      "nota": 10,
+      "urlIMDB": "",
+      "genero": "Comédia",
+      "id": 25
+    },
+    {
+      "titulo": "teste",
+      "urlFoto": "",
+      "dtLancamento": "2022-10-24T03:00:00.000Z",
+      "descricao": "",
+      "nota": 10,
+      "urlIMDB": "",
+      "genero": "Ação",
+      "id": 26
     }
   ]
 }
