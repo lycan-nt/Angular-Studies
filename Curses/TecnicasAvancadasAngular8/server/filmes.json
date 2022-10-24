@@ -209,6 +209,36 @@
       "urlIMDB": "",
       "genero": "Terror",
       "id": 21
+    },
+    {
+      "titulo": "Teste",
+      "urlFoto": "",
+      "dtLancamento": "2022-10-24T03:00:00.000Z",
+      "descricao": "teste",
+      "nota": 10,
+      "urlIMDB": "",
+      "genero": "Ação",
+      "id": 22
+    },
+    {
+      "titulo": "opa",
+      "urlFoto": "",
+      "dtLancamento": "2022-10-24T03:00:00.000Z",
+      "descricao": "teste",
+      "nota": 0,
+      "urlIMDB": "",
+      "genero": "Ação",
+      "id": 23
+    },
+    {
+      "titulo": "hello",
+      "urlFoto": "",
+      "dtLancamento": "2022-10-24T03:00:00.000Z",
+      "descricao": "",
+      "nota": 10,
+      "urlIMDB": "",
+      "genero": "Ação",
+      "id": 24
     }
   ]
 }
