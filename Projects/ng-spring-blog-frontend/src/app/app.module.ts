@@ -15,6 +15,7 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { AddPostComponent } from './add-post/add-post.component';
 import { EditorModule } from '@tinymce/tinymce-angular';
+import { PostComponent } from './post/post.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { EditorModule } from '@tinymce/tinymce-angular';
     LoginComponent,
     RegisterSuccessComponent,
     HomeComponent,
-    AddPostComponent
+    AddPostComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,
@@ -32,11 +34,13 @@ import { EditorModule } from '@tinymce/tinymce-angular';
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
+      {path: '', component: HomeComponent},
       {path: 'register', component: RegisterComponent},
       {path: 'register-success', component: RegisterSuccessComponent},
       {path: 'login', component: LoginComponent},
       {path: 'home', component: HomeComponent},
-      {path: 'add-post', component: AddPostComponent}
+      {path: 'add-post', component: AddPostComponent},
+      {path: 'post/:id', component: PostComponent}
     ]),
     HttpClientModule,
     NgxWebstorageModule.forRoot(),
