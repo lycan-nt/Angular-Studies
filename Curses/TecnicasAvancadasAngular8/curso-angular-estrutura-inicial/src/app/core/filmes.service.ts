@@ -17,4 +17,8 @@ export class FilmesService {
   salvar(filme: Filme): Observable<Filme> {
     return this.httpClient.post<Filme>(url, filme);
   }
+
+  listar(): Observable<Filme[]> {
+    return this.httpClient.get<Filme[]>(url);
+  }
 }
